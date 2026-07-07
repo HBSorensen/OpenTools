@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/Main.qml</file>
+        <file>qml/Dro.qml</file>
+        <file>qml/ConnectPage.qml</file>
+        <file>qml/FilesPage.qml</file>
+        <file>qml/JogPage.qml</file>
+        <file>qml/ProbePage.qml</file>
+        <file>qml/PcbPage.qml</file>
+        <file>qml/AlignPage.qml</file>
+        <file>qml/RunPage.qml</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,6 @@
+# Auto-mount removable USB mass-storage partitions so users can load .nc files
+# from a stick. Only fires for partitions on USB block devices.
+# Start/stop the templated mount service keyed on the kernel device name.
+
+ACTION=="add", KERNEL=="sd[a-z][0-9]", SUBSYSTEMS=="usb", ENV{SYSTEMD_WANTS}="usb-mount@%k.service"
+ACTION=="remove", KERNEL=="sd[a-z][0-9]", SUBSYSTEMS=="usb", RUN+="/bin/systemctl --no-block stop usb-mount@%k.service"

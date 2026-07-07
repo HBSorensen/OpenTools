@@ -1,0 +1,14 @@
+# OpenTools SD-card layout for the Raspberry Pi 3.
+#
+#   p1  /boot   vfat   RPi firmware + kernel + dtb + overlays  (bootimg-partition)
+#   p2  /       ext4   root filesystem, mounted READ-ONLY at runtime
+#   p3  /data   ext4   small writable partition: settings + saved .nc files
+#
+# External USB sticks are auto-mounted under /run/media at runtime (tmpfs), so
+# the read-only rootfs is never touched by user data.
+
+part /boot --source bootimg-partition --ondisk mmcblk0 --fstype=vfat --label boot --active --align 4096 --size 100M
+part /     --source rootfs            --ondisk mmcblk0 --fstype=ext4 --label root --align 4096
+part /data                            --ondisk mmcblk0 --fstype=ext4 --label data --align 4096 --size 64M --fsoptions "defaults,noatime"
+
+bootloader --ptable msdos

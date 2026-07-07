@@ -1,0 +1,14 @@
+[Unit]
+Description=OpenTools writable data partition
+DefaultDependencies=no
+Before=local-fs.target
+After=systemd-fsck@dev-disk-by\x2dlabel-data.service
+
+[Mount]
+What=/dev/disk/by-label/data
+Where=/data
+Type=ext4
+Options=defaults,noatime
+
+[Install]
+WantedBy=local-fs.target

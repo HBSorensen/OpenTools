@@ -1,0 +1,65 @@
+# kas build definition for the OpenTools G-code sender appliance image.
+#
+#   Raspberry Pi 3 (32-bit armv7)  •  Yocto scarthgap (5.0 LTS)
+#   Boots straight into the "gsender" touch UI (Qt6/eglfs) talking to grblHAL.
+#
+# Build (on a Linux host or WSL2 with Docker) from the repo root:
+#
+#   kas-container build Software/yocto/kas/opentools-rpi3.yml
+#
+# Result: build/tmp/deploy/images/raspberrypi3/opentools-image-raspberrypi3.wic.bz2
+# See Software/docs/BUILD.md for flashing and troubleshooting.
+
+header:
+  version: 14
+
+distro: opentools
+machine: raspberrypi3
+target: opentools-image
+
+repos:
+  # The repo that contains THIS kas file. An entry with no url/path makes kas
+  # use the enclosing git repo; layer paths are relative to that repo root.
+  opentools:
+    layers:
+      Software/yocto/meta-opentools:
+
+  poky:
+    url: https://git.yoctoproject.org/poky
+    branch: scarthgap
+    layers:
+      meta:
+      meta-poky:
+
+  meta-openembedded:
+    url: https://git.openembedded.org/meta-openembedded
+    branch: scarthgap
+    layers:
+      meta-oe:
+      meta-python:
+      meta-networking:
+      meta-multimedia:
+
+  meta-raspberrypi:
+    url: https://git.yoctoproject.org/meta-raspberrypi
+    branch: scarthgap
+
+  meta-qt6:
+    url: https://code.qt.io/yocto/meta-qt6.git
+    branch: scarthgap
+
+local_conf_header:
+  standard: |
+    CONF_VERSION = "2"
+    PACKAGE_CLASSES = "package_ipk"
+    USER_CLASSES ?= "buildstats"
+    # Keep the sstate/download cache outside per-build tmp so rebuilds are fast.
+    BB_NUMBER_THREADS ?= "${@oe.utils.cpu_count()}"
+    PARALLEL_MAKE ?= "-j ${@oe.utils.cpu_count()}"
+
+  opentools: |
+    # Machine tuning + config.txt fragments for the 7" DSI panel live here.
+    require conf/machine/include/opentools-rpi.inc
+
+    # Ship a flashable SD-card image (+ bmap for fast flashing with bmaptool).
+    IMAGE_FSTYPES = "wic.bz2 wic.bmap"

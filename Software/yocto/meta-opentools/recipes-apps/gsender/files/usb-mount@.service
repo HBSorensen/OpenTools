@@ -1,0 +1,10 @@
+[Unit]
+Description=Auto-mount USB stick /dev/%i under /run/media
+BindsTo=dev-%i.device
+After=dev-%i.device
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/usb-mount add %i
+ExecStop=/usr/bin/usb-mount remove %i
