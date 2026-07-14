@@ -1,0 +1,92 @@
+#VRML V2.0 utf8
+# VAR-SOM-MX8M-PLUS on 200-pin SO-DIMM socket - approximate model (OpenTools)
+Transform { translation 0.000 0.000 4.400
+  children Shape {
+    appearance Appearance { material Material { diffuseColor 0.05 0.05 0.05 specularColor 0.2 0.2 0.2 shininess 0.3 } }
+    geometry Box { size 79.600 8.000 8.800 }
+  }
+}
+Transform { translation 0.000 0.000 8.900
+  children Shape {
+    appearance Appearance { material Material { diffuseColor 0.12 0.12 0.14 specularColor 0.2 0.2 0.2 shininess 0.3 } }
+    geometry Box { size 76.600 6.500 0.600 }
+  }
+}
+Transform { translation -39.000 0.000 4.400
+  children Shape {
+    appearance Appearance { material Material { diffuseColor 0.75 0.75 0.78 specularColor 0.2 0.2 0.2 shininess 0.3 } }
+    geometry Box { size 2.200 9.000 9.000 }
+  }
+}
+Transform { translation 39.000 0.000 4.400
+  children Shape {
+    appearance Appearance { material Material { diffuseColor 0.75 0.75 0.78 specularColor 0.2 0.2 0.2 shininess 0.3 } }
+    geometry Box { size 2.200 9.000 9.000 }
+  }
+}
+Transform { translation 0.000 20.500 5.600
+  children Shape {
+    appearance Appearance { material Material { diffuseColor 0.05 0.35 0.12 specularColor 0.2 0.2 0.2 shininess 0.3 } }
+    geometry Box { size 67.800 33.000 1.200 }
+  }
+}
+Transform { translation 0.000 5.000 5.600
+  children Shape {
+    appearance Appearance { material Material { diffuseColor 0.8 0.65 0.2 specularColor 0.2 0.2 0.2 shininess 0.3 } }
+    geometry Box { size 64.000 2.000 1.250 }
+  }
+}
+Transform { translation 0.000 20.000 7.100
+  children Shape {
+    appearance Appearance { material Material { diffuseColor 0.05 0.05 0.05 specularColor 0.2 0.2 0.2 shininess 0.3 } }
+    geometry Box { size 17.000 17.000 1.800 }
+  }
+}
+Transform { translation -16.000 20.000 6.800
+  children Shape {
+    appearance Appearance { material Material { diffuseColor 0.12 0.12 0.14 specularColor 0.2 0.2 0.2 shininess 0.3 } }
+    geometry Box { size 10.000 12.000 1.200 }
+  }
+}
+Transform { translation 16.000 20.000 6.800
+  children Shape {
+    appearance Appearance { material Material { diffuseColor 0.12 0.12 0.14 specularColor 0.2 0.2 0.2 shininess 0.3 } }
+    geometry Box { size 10.000 12.000 1.200 }
+  }
+}
+Transform { translation -20.000 31.000 6.700
+  children Shape {
+    appearance Appearance { material Material { diffuseColor 0.12 0.12 0.14 specularColor 0.2 0.2 0.2 shininess 0.3 } }
+    geometry Box { size 8.000 8.000 1.000 }
+  }
+}
+Transform { translation 18.000 32.000 6.700
+  children Shape {
+    appearance Appearance { material Material { diffuseColor 0.12 0.12 0.14 specularColor 0.2 0.2 0.2 shininess 0.3 } }
+    geometry Box { size 7.000 6.000 1.000 }
+  }
+}
+Transform { translation -31.260 30.450 2.500
+  children Shape {
+    appearance Appearance { material Material { diffuseColor 0.7 0.7 0.72 specularColor 0.4 0.4 0.4 shininess 0.5 } }
+    geometry Cylinder { radius 1.60 height 5.00 }
+  }
+}
+Transform { translation -31.260 30.450 6.500
+  children Shape {
+    appearance Appearance { material Material { diffuseColor 0.55 0.55 0.58 specularColor 0.4 0.4 0.4 shininess 0.5 } }
+    geometry Cylinder { radius 1.70 height 0.60 }
+  }
+}
+Transform { translation 31.260 30.450 2.500
+  children Shape {
+    appearance Appearance { material Material { diffuseColor 0.7 0.7 0.72 specularColor 0.4 0.4 0.4 shininess 0.5 } }
+    geometry Cylinder { radius 1.60 height 5.00 }
+  }
+}
+Transform { translation 31.260 30.450 6.500
+  children Shape {
+    appearance Appearance { material Material { diffuseColor 0.55 0.55 0.58 specularColor 0.4 0.4 0.4 shininess 0.5 } }
+    geometry Cylinder { radius 1.70 height 0.60 }
+  }
+}

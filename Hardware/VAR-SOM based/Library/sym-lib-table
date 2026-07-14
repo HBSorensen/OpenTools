@@ -1,0 +1,4 @@
+(sym_lib_table
+	(version 7)
+	(lib (name "VAR-SOM")(type "KiCad")(uri "${VARSOM_LIB}/VAR-SOM.kicad_sym")(options "")(descr "Variscite VAR-SOM Pin2Pin System-on-Module symbols (200-pin SO-DIMM)"))
+)

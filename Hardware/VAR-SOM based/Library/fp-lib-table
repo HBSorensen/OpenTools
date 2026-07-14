@@ -1,0 +1,4 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "VAR-SOM")(type "KiCad")(uri "${VARSOM_LIB}/VAR-SOM.pretty")(options "")(descr "Variscite VAR-SOM 200-pin SO-DIMM socket footprints (JEDEC MO-224)"))
+)
